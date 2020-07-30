@@ -9,12 +9,12 @@ Route::get('/', 'ProductController@index')->name('home');
 
 Route::get('/show/{id}', 'ProductController@show')->name('show');
 
-Route::get('/cart/{id}', 'ProductController@cart')->name('cart');
+Route::get('/cart/{id}', 'CartController@addCart')->name('cart');
 
-Route::get('/delCart/{id}', 'ProductController@delCart')->name('del');
+Route::post('/delCart', 'CartController@delCart')->name('del');
 
-Route::get('/allCart', 'ProductController@allCart')->name('allCart');
+Route::get('/allCart', 'CartController@allCart')->name('allCart');
 
-Route::post('/addCart', 'ProductController@addCart')->name('addCart');
+Route::post('/addCart', 'CartController@addQuantityProductCart')->name('addCart');
 
 
