@@ -12,8 +12,15 @@ class ProductController extends Controller
     public function index()
     {
         $product = Product::all();
+        if(Session::has('cart')){
+            $listProductCart = Session::get('cart');
+            $totalQuantity = 0;
+            foreach($listProductCart as $value){
+                $totalQuantity += ($value['quantity']*$value['price']);
+            }
+        }
         
-        return view('index', compact(['product']));
+        return view('index', compact(['product', 'totalQuantity']));
     }
     public function show(Request $request)
     {

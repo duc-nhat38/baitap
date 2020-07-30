@@ -19,6 +19,7 @@ class CreateProductsTable extends Migration
             $table->string('description');
             $table->float('price');
             $table->integer('view_count');
+            $table->longText('image');
             $table->timestamps();
         });
     }

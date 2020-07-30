@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Product;
 use Illuminate\Database\Seeder;
 
 class ProductsTableSeeder extends Seeder
@@ -11,25 +12,6 @@ class ProductsTableSeeder extends Seeder
      */
     public function run()
     {
-        $product = new \App\Models\Product();
-        $product->name = 'Sản phẩm 001';
-        $product->description = 'Sản phẩm có mã số 001.';
-        $product->price = 1.5;
-        $product->view_count = 0;
-        $product->save();
-
-        $product = new \App\Models\Product();
-        $product->name = 'Sản phẩm 002';
-        $product->description = 'Sản phẩm có mã số 002.';
-        $product->price = 2.5;
-        $product->view_count = 0;
-        $product->save();
-
-        $product = new \App\Models\Product();
-        $product->name = 'Sản phẩm 003';
-        $product->description = 'Sản phẩm có mã số 003.';
-        $product->price = 1.5;
-        $product->view_count = 0;
-        $product->save();
+        factory(Product::class, 25)->create();
     }
 }
