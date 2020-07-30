@@ -7,7 +7,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="{{ route('allCart') }}"><div class="cart-quanti"><i class="fas fa-shopping-cart" id="icon-cart"></i><div id="quanti">0</div></div><span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="{{ route('allCart') }}"><div class="cart-quanti"><i class="fas fa-shopping-cart" id="icon-cart"></i><div id="quanti">{{ $totalQuantity }}</div></div><span class="sr-only">(current)</span></a>
         </li>
         
       </ul>

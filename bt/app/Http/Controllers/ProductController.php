@@ -18,6 +18,8 @@ class ProductController extends Controller
             foreach($listProductCart as $value){
                 $totalQuantity += ($value['quantity']*$value['price']);
             }
+        }else{
+            $totalQuantity = 0;
         }
         
         return view('index', compact(['product', 'totalQuantity']));
